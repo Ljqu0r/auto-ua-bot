@@ -394,7 +394,7 @@ background-color: map-get($colors, theme-blue);
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    background-image: url(../../../images/left-arrow.svg);
+    background-image: url(../../images/left-arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -413,7 +413,7 @@ background-color: map-get($colors, theme-blue);
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    background-image: url(../../../images/right-arrow.svg);
+    background-image: url(../../images/right-arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -424,7 +424,7 @@ background-color: map-get($colors, theme-blue);
     border-radius: 5px 0 0 5px; }
 
 .slider-container__item {
-  background-image: url(../../../images/bmw-bg.png);
+  background-image: url(../../images/bmw-bg.png);
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;

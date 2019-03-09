@@ -11,7 +11,7 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    background-image: url(../../../images/left-arrow.svg);
+    background-image: url(../../images/left-arrow.svg);
     @include bg-img;
     background-size: 28px;
     background-position-x: 35%;
@@ -29,7 +29,7 @@
     top: 50%;
     right: 0;
     transform: translateY(-50%);
-    background-image: url(../../../images/right-arrow.svg);
+    background-image: url(../../images/right-arrow.svg);
     @include bg-img;
     background-size: 28px;
     background-position-x: 65%;
@@ -40,7 +40,7 @@
 }
 
 .slider-container__item {
-  background-image: url(../../../images/bmw-bg.png);
+  background-image: url(../../images/bmw-bg.png);
   height: 100%;
   width: 100%;
   @include bg-img;
