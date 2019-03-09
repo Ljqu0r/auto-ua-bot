@@ -7,10 +7,10 @@
   margin: 0 auto;
   font-family: 'Nanum Gothic', sans-serif;
   text-align: center;
-  .logo__link{
+  .logo__link {
     font-size: 46px;
     color: map_get($colors, txt-dark);
-    padding: 50px 0;
+    margin: 50px 0;
     display: inline-block;
   }
 }
@@ -30,13 +30,21 @@
   justify-content: space-between;
   margin: 0;
   padding: 0;
-  .nav-bar__item--active {
-    border-bottom: 7px solid map_get($colors, border-red);
-  }
 }
 
 .nav-bar__item {
   padding: 0 0 50px 0;
+  height: 74px;
+  transition: border-bottom .3s ease-in-out;
+  border-bottom: 0px solid map_get($colors, border-red);
+  &:hover {
+    border-bottom: 7px solid map_get($colors, border-red);
+    transition: border-bottom .3s ease-in-out;
+  }
+}
+
+.nav-bar__item--last:hover{
+  border-bottom: none;
 }
 
 .nav-btn__link {
@@ -48,9 +56,9 @@
   padding: 0 0 50px 0;
 }
 
-.nav-btn__link--red{
+.nav-btn__link--red {
   border: 3px solid map_get($colors, border-red);
-  padding: 18px 27px;
+  padding: 13px 25px 12px;
   color: map_get($colors, txt-red);
 }
 

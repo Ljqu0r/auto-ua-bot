@@ -1,6 +1,12 @@
 .slider-container {
-  height: 809px;
+
   position: relative;
+  @include respond-to('xl'){
+    height: calc(100vh - 226px);
+  }
+  @include respond-to('l'){
+    height: calc(100vh - 226px);
+  }
   &:before{
     content: "";
     position: absolute;
@@ -39,6 +45,7 @@
   }
 }
 
+
 .slider-container__item {
   background-image: url(../../images/bmw-bg.png);
   height: 100%;
@@ -48,6 +55,13 @@
 
 .slide-title{
   margin: 0;
+  @include respond-to('l'){
+    font-size: 36px;
+  }
+
+  @include respond-to('xl'){
+    font-size: 45px;
+  }
 }
 
 .title-wrapper {
@@ -55,8 +69,20 @@
   top: 75px;
   left: 0;
   right: 0;
-  margin-left: calc((100% - 1140px)/2);
-  margin-right: calc((100% - 1140px)/2);
+  display: flex;
+  flex-direction: column;
+  @include respond-to('l'){
+    margin-left: calc((100% - 960px)/2);
+    margin-right: calc((100% - 960px)/2);
+    align-items: center;
+  }
+
+  @include respond-to('xl'){
+    margin-left: calc((100% - 1140px)/2);
+    margin-right: calc((100% - 1140px)/2);
+    align-items: flex-start;
+  }
+
 }
 
 .slide-title__item {
@@ -67,8 +93,7 @@
   display: inline-block;
   background-color: map_get($colors, bg-gray);
   margin-bottom: 1px;
-  padding: 20px 18px 12px 23px;
-  font-size: 50px;
+  padding: 10px 18px 9px 23px;
 }
 
 .title-wrapper__subtitle{
@@ -79,7 +104,21 @@
   text-transform: uppercase;
   letter-spacing: .72px;
   background-color: map_get($colors, bg-red);
-  padding: 24px 17px 19px 20px;
+  padding: 17px 17px 16px 20px;
   display: inline-block;
   margin-top: 23px;
+
+  @include respond-to('l'){
+    font-size: 28px;
+    max-width: 405px;
+    align-self: flex-end;
+    margin-right: 50px;
+  }
+
+  @include respond-to('xl'){
+    font-size: 36px;
+    max-width: 505px;
+    align-self: flex-start;
+    margin-right: 0;
+  }
 }
