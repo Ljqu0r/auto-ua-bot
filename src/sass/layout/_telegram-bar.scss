@@ -66,7 +66,7 @@
 
         height: 26px;
         width: 28px;
-        background-image: url(../../../images/paper-plane.svg);
+        background-image: url(../../images/paper-plane.svg);
         z-index: 2;
         @include bg-img;
         @include respond-to('l') {
