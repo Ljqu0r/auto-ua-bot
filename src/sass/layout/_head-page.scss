@@ -1,0 +1,56 @@
+.head-page {
+  background-color: map_get($colors, txt-white);
+  width: 100%;
+}
+
+.logo {
+  margin: 0 auto;
+  font-family: 'Nanum Gothic', sans-serif;
+  text-align: center;
+  .logo__link{
+    font-size: 46px;
+    color: map_get($colors, txt-dark);
+    padding: 50px 0;
+    display: inline-block;
+  }
+}
+
+.nav-container {
+  margin: 0 auto;
+  @include respond-to('l') {
+    width: 960px;
+  }
+  @include respond-to('xl') {
+    width: 1140px;
+  }
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  .nav-bar__item--active {
+    border-bottom: 7px solid map_get($colors, border-red);
+  }
+}
+
+.nav-bar__item {
+  padding: 0 0 50px 0;
+}
+
+.nav-btn__link {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: map_get($colors, txt-dark);
+  padding: 0 0 50px 0;
+}
+
+.nav-btn__link--red{
+  border: 3px solid map_get($colors, border-red);
+  padding: 18px 27px;
+  color: map_get($colors, txt-red);
+}
+

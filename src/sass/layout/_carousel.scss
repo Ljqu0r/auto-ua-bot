@@ -1,0 +1,85 @@
+.slider-container {
+  height: 809px;
+  position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 212px;
+    width: 50px;
+    background-color: map_get($colors, txt-white);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-image: url(../../../images/left-arrow.svg);
+    @include bg-img;
+    background-size: 28px;
+    background-position-x: 35%;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+  }
+  &:after{
+    content: "";
+    position: absolute;
+    display: block;
+    height: 212px;
+    width: 50px;
+    background-color: map_get($colors, txt-white);
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url(../../../images/right-arrow.svg);
+    @include bg-img;
+    background-size: 28px;
+    background-position-x: 65%;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 5px 0 0 5px;
+  }
+}
+
+.slider-container__item {
+  background-image: url(../../../images/bmw-bg.png);
+  height: 100%;
+  width: 100%;
+  @include bg-img;
+}
+
+.slide-title{
+  margin: 0;
+}
+
+.title-wrapper {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  right: 0;
+  margin-left: calc((100% - 1140px)/2);
+  margin-right: calc((100% - 1140px)/2);
+}
+
+.slide-title__item {
+  font-weight: 800;
+  color: map_get($colors, txt-white);
+  text-transform: uppercase;
+  line-height: 60px;
+  display: inline-block;
+  background-color: map_get($colors, bg-gray);
+  margin-bottom: 1px;
+  padding: 20px 18px 12px 23px;
+  font-size: 50px;
+}
+
+.title-wrapper__subtitle{
+  color: map_get($colors, txt-white);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 38px;
+  text-transform: uppercase;
+  letter-spacing: .72px;
+  background-color: map_get($colors, bg-red);
+  padding: 24px 17px 19px 20px;
+  display: inline-block;
+  margin-top: 23px;
+}
