@@ -10,7 +10,7 @@ const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 
 
-function watch(){
+function watch() {
     browserSync.init({
         server: {
             baseDir: './'
@@ -22,34 +22,34 @@ function watch(){
 }
 
 
-
 //clean build folder function
-function clean(){
+function clean() {
     return del(['build/*']);
 }
+
 //from sass to css function
-function fromSASSToCSS(){
+function fromSASSToCSS() {
     return gulp.src('./src/sass/**/main.scss')
-            .pipe(autoprefixer({
+        .pipe(autoprefixer({
             browsers: ['> 0.1%'],
             cascade: false
-            }))
-            .pipe(sass.sync({
-                // outputStyle: 'compressed'
-            }))
+        }))
+        .pipe(sass.sync({
+            // outputStyle: 'compressed'
+        }))
         .on('error', notify.onError({
             message: "Error: <%= error.message %>",
             title: 'Sass error'
         }))
-            .pipe(rename({
-                suffix: '.min',
-                prefix: ''
-            }))
-            .pipe(sourcemaps.init())
-            // .pipe(cssnano())
-            .pipe(sourcemaps.write('.'))
-            .pipe(gulp.dest('./build/css'))
-            .pipe(browserSync.stream());
+        .pipe(rename({
+            suffix: '.min',
+            prefix: ''
+        }))
+        .pipe(sourcemaps.init())
+        // .pipe(cssnano())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('./build/css'))
+        .pipe(browserSync.stream());
 }
 
 gulp.task('img', () =>
@@ -57,7 +57,12 @@ gulp.task('img', () =>
         .pipe(imagemin())
         .pipe(gulp.dest('./images'))
 );
+gulp.task('fonts', () =>
+    gulp.src('src/fonts/**/*')
+        .pipe(gulp.dest('./build/fonts'))
+);
+
 gulp.task('watch', watch);  //watch task
 gulp.task('sass', gulp.series(fromSASSToCSS, watch));  //task for compile scss to css and watch
 gulp.task('clean', clean);   //task for clean build folder
-gulp.task('build', gulp.series('clean', 'img', 'sass', 'watch'));   //build project task
+gulp.task('build', gulp.series('clean', 'img', 'fonts', 'sass', 'watch'));   //build project task

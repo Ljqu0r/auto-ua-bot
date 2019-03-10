@@ -12,17 +12,13 @@
     color: map_get($colors, txt-dark);
     margin: 50px 0;
     display: inline-block;
+    text-transform: uppercase;
   }
 }
 
 .nav-container {
   margin: 0 auto;
-  @include respond-to('l') {
-    width: 960px;
-  }
-  @include respond-to('xl') {
-    width: 1140px;
-  }
+  width: 1140px;
 }
 
 .nav-bar {
@@ -33,15 +29,15 @@
   height: 68px;
 }
 
-.nav-bar__item{
-max-height: 24px;
-  &:hover>.nav-btn__link:after{
+.nav-bar__item {
+  max-height: 24px;
+  &:hover > .nav-btn__link:after {
     opacity: 1;
     transform: translateY(62px);
   }
 }
 
-.nav-btn .nav-btn__link--red:after{
+.nav-btn .nav-btn__link--red:after {
   display: none;
 }
 
@@ -52,7 +48,8 @@ max-height: 24px;
   letter-spacing: 0.4px;
   color: map_get($colors, txt-dark);
   position: relative;
-  &:after{
+  font-family: 'Raleway', sans-serif;
+  &:after {
     content: '';
     display: block;
     position: absolute;
@@ -66,12 +63,10 @@ max-height: 24px;
     background-color: map_get($colors, border-red);
     pointer-events: none;
   }
-  &:hover:after{
+  &:hover:after {
     pointer-events: none;
   }
-  }
-
-
+}
 
 .nav-btn__link--red {
   border: 3px solid map_get($colors, border-red);
