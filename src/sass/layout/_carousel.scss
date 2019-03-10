@@ -2,10 +2,11 @@
 
   position: relative;
   @include respond-to('xl'){
-    height: calc(100vh - 226px);
+    height: calc(100vh - 220px);
   }
   @include respond-to('l'){
-    height: calc(100vh - 226px);
+    height: calc(100vh - 220px);
+    min-height: calc(768px - 220px);
   }
   &:before{
     content: "";
