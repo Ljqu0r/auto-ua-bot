@@ -1,6 +1,10 @@
 .slider-container {
   position: relative;
-  height: calc(100vh - 220px);
+  height: 809px;
+  @include max(1919px){
+    height: calc(100vh - 184px);
+    min-height: 550px;
+  }
 
   &:before {
     content: "";
@@ -52,18 +56,24 @@
   font-size: 52px;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
+  @include max(1919px){
+    font-size: 46px;
+  }
 }
 
 .title-wrapper {
   position: absolute;
-  top: 75px;
+  top: 105px;
   left: 0;
   right: 0;
   display: flex;
   flex-direction: column;
-  margin-left: calc((100% - 1140px) / 2);
-  margin-right: calc((100% - 1140px) / 2);
+  @include margin-xl;
   align-items: flex-start;
+  @include max(1919px){
+    @include margin-l;
+    top: 80px;
+  }
 }
 
 .slide-title__item {
@@ -75,6 +85,9 @@
   background-color: map_get($colors, bg-gray);
   margin-bottom: 1px;
   padding: 10px 18px 9px 23px;
+  @include max(1919px){
+    line-height: 46px;
+  }
 }
 
 .title-wrapper__subtitle {
@@ -92,4 +105,9 @@
   align-self: flex-start;
   margin-right: 0;
   text-transform: uppercase;
+  @include max(1919px){
+    font-size: 30px;
+    line-height: 30px;
+    padding: 10px 10px 10px 23px;
+  }
 }

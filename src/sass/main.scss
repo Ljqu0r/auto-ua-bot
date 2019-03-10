@@ -9,8 +9,9 @@
 @import "layout/head-page";
 @import "layout/carousel";
 @import "layout/telegram-bar";
+@import "layout/utilities";
 
 
-body{
+a{
   @include noselect;
 }

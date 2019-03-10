@@ -4,14 +4,9 @@
   background-size: cover;
 }
 
-@mixin respond-to($breakpoint) {
-  @if map-has-key($min-breakpoints, $breakpoint) {
-    @media (min-width: map-get($min-breakpoints, $breakpoint)) {
-      @content;
-    }
-  } @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Available breakpoints are: #{map-keys($min-breakpoints)}.";
+@mixin max($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
   }
 }
 
@@ -25,3 +20,14 @@
   /* Non-prefixed version, currently
                                    supported by Chrome and Opera */
 }
+
+@mixin margin-xl{
+  margin-left: calc((100% - 1140px) / 2);
+  margin-right: calc((100% - 1140px) / 2);
+}
+
+@mixin margin-l{
+  margin-left: calc((100% - 992px) / 2);
+  margin-right: calc((100% - 992px) / 2);
+}
+
