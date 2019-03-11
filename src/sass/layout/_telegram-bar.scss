@@ -13,7 +13,7 @@
   line-height: 45px;
   padding: 44.5px 0 44.5px;
   @include margin-xl;
-  @include max(1919px){
+  @include max(1919px) {
     @include margin-l;
   }
   .telegram-container__title {
@@ -23,13 +23,13 @@
     text-transform: uppercase;
     line-height: 45px;
     width: 500px;
-    @include max(1919px){
+    @include max(1919px) {
       font-size: 30px;
       line-height: 30px;
     }
   }
 
-  .telegram-button__link {
+  .telegram-container__button {
     color: map_get($colors, txt-white);
     font-family: 'Raleway', sans-serif;
     font-size: 22px;
@@ -39,8 +39,20 @@
     background-color: map_get($colors, bg-red);
     position: relative;
     padding: 14.5px 100px 14.5px 131px;
-    @include max(1919px){
+    transition: transform .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform: scale(1);
+    &:hover {
+      transform: scale(1.1);
+    }
+    &:active {
+      transform: scale(1);
+    }
+    &:focus {
+      outline: none;
+    }
+    @include max(1919px) {
       padding: 14.5px 75px 14.5px 100px;
+
     }
     &:before {
       content: '';
@@ -54,10 +66,10 @@
       z-index: 2;
       @include bg-img;
       transform: translate(0, -50%);
-      @include max(1919px){
+      @include max(1919px) {
         transform: translate(-50%, -50%);
       }
     }
   }
-
 }
+

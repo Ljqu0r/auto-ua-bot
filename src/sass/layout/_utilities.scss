@@ -1,4 +1,4 @@
-.utilities {
+.wrapper {
   background-color: map_get($colors, txt-white);
 }
 
@@ -58,7 +58,7 @@
   transition: transform .3s ease-in-out;
   padding: 15px 0;
   &:hover {
-    transform: scale(1.05, 1.05);
+    transform: scale(1.1, 1.1);
   }
 }
 

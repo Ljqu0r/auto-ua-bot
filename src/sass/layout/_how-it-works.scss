@@ -1,0 +1,68 @@
+.about {
+  height: 494px;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin-top: 100px;
+  margin-bottom: 125px;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  @include slide-arrows;
+}
+
+.video-container {
+  background-color: map_get($colors, bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .video-container__play-button {
+    width: 107px;
+    height: 107px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+}
+
+.desc-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.desc-container__item {
+  background-color: map_get($colors, bg-dark);
+  position: relative;
+}
+
+.desc__text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  color: map_get($colors, txt-white);
+  font-size: 20px;
+  line-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding: 37px 40px 0 30px;
+  height: 80%;
+}
+
+.arrow {
+  height: 12px;
+  width: 18px;
+  position: absolute;
+  bottom: 31px;
+  left: 32px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.arrow__img {
+  height: 100%;
+  width: 100%;
+}

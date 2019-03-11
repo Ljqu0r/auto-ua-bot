@@ -31,3 +31,40 @@
   margin-right: calc((100% - 992px) / 2);
 }
 
+
+@mixin slide-arrows{
+  &:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 212px;
+    width: 50px;
+    background-color: map_get($colors, arrow-bg);
+    top: 50%;
+    left: -32px;
+    transform: translateY(-50%);
+    background-image: url(../../images/left-arrow.svg);
+    @include bg-img;
+    background-size: 28px;
+    background-position-x: 35%;
+    z-index: 1;
+    cursor: pointer;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 212px;
+    width: 50px;
+    background-color: map_get($colors, arrow-bg);
+    top: 50%;
+    right: -32px;
+    transform: translateY(-50%);
+    background-image: url(../../images/right-arrow.svg);
+    @include bg-img;
+    background-size: 28px;
+    background-position-x: 65%;
+    z-index: 1;
+    cursor: pointer;
+  }
+}

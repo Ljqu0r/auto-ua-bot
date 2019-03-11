@@ -14,17 +14,17 @@
     margin: 55px 0 51px;
     display: inline-block;
     text-transform: uppercase;
-    @include max(1919px){
+    @include max(1919px) {
       font-size: 36px;
       line-height: 36px;
       margin: 30px 0 40px;
     }
-    @include max(1365px){
+    @include max(1365px) {
       font-size: 36px;
       line-height: 36px;
       margin: 30px 0 40px;
     }
-    @include max(1279px){
+    @include max(1279px) {
       font-size: 36px;
       line-height: 36px;
       margin: 30px 0 40px;
@@ -34,7 +34,7 @@
 
 .nav-container {
   @include margin-xl;
-  @include max(1919px){
+  @include max(1919px) {
     @include margin-l;
   }
 }
@@ -90,5 +90,14 @@
   border: 3px solid map_get($colors, border-red);
   padding: 13px 25px 12px;
   color: map_get($colors, txt-red);
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    color: map_get($colors, txt-white);
+    background-color: map_get($colors, border-red);
+  }
+
 }
 
