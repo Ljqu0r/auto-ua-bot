@@ -49,20 +49,15 @@
   height: 80%;
 }
 
-.arrow {
-  height: 12px;
+.arrow-down {
+  height: 18px;
   width: 18px;
   position: absolute;
-  bottom: 31px;
+  bottom: 28px;
   left: 32px;
   display: flex;
   align-items: center;
   align-content: center;
   justify-content: center;
-  cursor: pointer;
-}
-
-.arrow__img {
-  height: 100%;
-  width: 100%;
+  cursor: pointer
 }
