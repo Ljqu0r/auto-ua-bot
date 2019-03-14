@@ -12,10 +12,11 @@
   font-size: 32px;
   line-height: 45px;
   padding: 44.5px 0 44.5px;
+  @include margin-l;
   @include margin-xl;
-  @include max(1919px) {
-    @include margin-l;
-  }
+
+
+
   .telegram-container__title {
     color: map_get($colors, txt-white);
     font-weight: 800;

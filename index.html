@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:800" rel="stylesheet">
     <link rel="stylesheet" href="build/css/main.min.css">
     <title>Document</title>
@@ -217,5 +218,82 @@
     </div>
 </section>
 <!--end of call-to-action block-->
+
+<section class="wrapper">
+    <div class="title-wrap">
+        <h2 class="title">FAQ</h2>
+    </div>
+    <div class="acordeon">
+        <div class="panel container">
+            <div class="panel__heading">
+                Как быстро связатся с продавцом и приобрести автомобиль?
+            </div>
+            <p class="panel__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+                dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis
+                natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus me Nam fermentum, nulla luctus pharetra
+                vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget ipsum dolor sit amet.
+            </p>
+        </div>
+        <div class="panel container">
+            <div class="panel__heading">
+                Как быстро связатся с продавцом и приобрести автомобиль?
+            </div>
+            <p class="panel__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+                dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis
+                natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus me Nam fermentum, nulla luctus pharetra
+                vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget ipsum dolor sit amet.
+            </p>
+        </div>
+        <div class="panel container">
+            <div class="panel__heading">
+                Как быстро связатся с продавцом и приобрести автомобиль?
+            </div>
+            <p class="panel__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+                dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis
+                natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus me Nam fermentum, nulla luctus pharetra
+                vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget ipsum dolor sit amet.
+            </p>
+        </div>
+        <div class="panel container">
+            <div class="panel__heading">
+                Как быстро связатся с продавцом и приобрести автомобиль?
+            </div>
+            <p class="panel__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+                dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis
+                natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus me Nam fermentum, nulla luctus pharetra
+                vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget ipsum dolor sit amet.
+            </p>
+        </div>
+        <div class="panel container">
+            <div class="panel__heading">
+                Как быстро связатся с продавцом и приобрести автомобиль?
+            </div>
+            <p class="panel__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida
+                dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis
+                natoque
+                penatibus et magnis dis parturient montes, nascetur ridiculus me Nam fermentum, nulla luctus pharetra
+                vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget ipsum dolor sit amet.
+            </p>
+        </div>
+    </div>
+</section>
+<script>
+    <!--акордеон временно в разметке-->
+    $(document).ready(function () {
+        $('.panel__heading').click(function () {
+            $(this).toggleClass('in').next().slideToggle();
+            $('.panel__heading').not(this).removeClass('in').next().slideUp();
+        });
+    });
+</script>
 </body>
 </html>

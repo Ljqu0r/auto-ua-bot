@@ -1,0 +1,61 @@
+.panel.container{
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.acordeon{
+  padding: 115px 0 113px;
+}
+
+.panel__heading {
+  width: 100%;
+  background: map_get($colors, bg-dark);
+  color: map_get($colors, txt-white);
+  padding: 23.5px 0 24px 50px;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 25.01px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  &:hover{
+    background: #3a3939;
+  }
+  &:after{
+    content: '';
+    position: absolute;
+    right: 53px;
+    height: 18px;
+    width: 18px;
+    background-image: url(../../images/arrow-down.svg);
+    transition: transform .3s ease-in-out;
+    @include bg-img;
+    cursor: pointer;
+  }
+
+}
+.panel__heading.in:after{
+  transform: rotate(180deg);
+}
+
+.panel__heading.in {
+  background: map_get($colors, bg-red);
+}
+
+.panel__text{
+  margin: 0;
+  width: 100%;
+  color: map_get($colors, txt-dark);
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  padding: 46px 87px 52px 57px;
+  background-color: map_get($colors, arrow-bg);
+  display: none;
+}
+
