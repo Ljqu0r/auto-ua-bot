@@ -11,7 +11,9 @@
 @import "layout/telegram-bar";
 @import "layout/utilities";
 @import "layout/how-it-works";
-@import "layout/acordeon";
+@import "layout/dropdown";
+@import "layout/question-block";
+@import "layout/footer";
 
 a{
   @include noselect;

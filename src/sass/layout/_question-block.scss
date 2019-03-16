@@ -1,0 +1,112 @@
+.wide-wrapper {
+  width: 100%;
+  background-color: map_get($colors, bg-litegray);
+}
+
+.form-wrapper {
+  @include margin-xl;
+  padding: 88px 0 97px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.question-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.question-container__heading{
+  color: map_get($colors, txt-white);
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 45px;
+}
+
+.question-container__text{
+  font-size: 34px;
+  line-height: 45px;
+  color: map_get($colors, txt-white);
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  padding: 5px 20px 5px 15px;
+  background-color: map_get($colors, bg-red);
+  margin: 18px 0 0 0;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  @include placeholder;
+  .form__item{
+    height: 61px;
+    width: 434px;
+    margin-bottom: 20px;
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ffffff60;
+    color: map_get($colors, txt-white);
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 22px;
+    padding-bottom: 5px;
+    transition: border .1s ease-in-out,
+    border-radius .3s ease-in-out,
+    background-color .2s ease-in-out,
+    padding-left .2s ease-in-out;
+    &:focus{
+      border-radius: 0 0 10px 10px;
+    }
+    &::placeholder{
+      color: map_get($colors, txt-white);
+      text-transform: uppercase;
+      letter-spacing: 0.85px;
+      font-size: 10px;
+
+    }
+    &:focus{
+      border: 2px solid #ffffff60 ;
+      padding-left: 20px;
+      background-color: #383838;
+      -webkit-border-radius: 10px 10px;
+      -moz-border-radius: 10px 10px;
+      border-radius: 10px 10px;
+    }
+
+  }
+
+  .text-area{
+    resize: none;
+    padding: 18px 0 0 0;
+  }
+
+  .form__btn{
+    width: 100%;
+    color: map_get($colors, txt-white);
+    background-color: map_get($colors, bg-dark);
+    border: none;
+    padding: 22px 0 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+    outline-color: #cccccc;
+  }
+}
+
+.img-container{
+  background-image: url(../../images/cars_rent.png);
+  @include bg-img;
+  height: 215px;
+  width: 891px;
+  max-width: 891px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}

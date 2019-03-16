@@ -40,17 +40,7 @@
     background-color: map_get($colors, bg-red);
     position: relative;
     padding: 14.5px 100px 14.5px 131px;
-    transition: transform .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transform: scale(1);
-    &:hover {
-      transform: scale(1.1);
-    }
-    &:active {
-      transform: scale(1);
-    }
-    &:focus {
-      outline: none;
-    }
+
     @include max(1919px) {
       padding: 14.5px 75px 14.5px 100px;
 
@@ -67,6 +57,21 @@
         transform: translate(-50%, -50%);
       }
     }
+  }
+}
+
+.button-animation{
+  will-change: transform;
+  transition: transform .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: scale(1);
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1);
+  }
+  &:focus {
+    outline: none;
   }
 }
 

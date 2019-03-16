@@ -1,0 +1,228 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  @include margin-xl;
+}
+
+.socials-title {
+  color: map_get($colors, txt-dark);
+  font-family: "Raleway", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 32px;
+  width: 650px;
+  margin: 65px auto 57px auto;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 57px 0 80px 0;
+}
+
+.inner {
+  width: 278px;
+  height: 55px;
+  background-color: map_get($colors, bg-dark);
+  position: relative;
+  font-family: "Raleway", sans-serif;
+}
+
+.socials-logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  @include bg-img;
+}
+
+.logo-facebook {
+  background-image: url(../../images/facebook.svg);
+  width: 30px;
+  height: 30px;
+  left: 19px;
+}
+
+.logo-viber {
+  background-image: url(../../images/viber-logo.svg);
+  width: 31px;
+  height: 31px;
+  left: 21px;
+}
+
+.logo-telegram {
+  background-image: url(../../images/telegram-logo.svg);
+  width: 28px;
+  height: 28px;
+  left: 19px;
+}
+
+.logo-whatsapp {
+  background-image: url(../../images/whatsapp.svg);
+  width: 29px;
+  height: 29px;
+  left: 22px;
+}
+
+.social-btn {
+  transition: background-color .3s ease-in-out, border-color .3s ease-in-out, color .3s ease-in-out;
+  width: 100%;
+  display: block;
+  height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.social-btn--dark {
+  color: map_get($colors, txt-white);
+  font-size: 18px;
+  line-height: 55px;
+}
+
+.subs-wrapper {
+  padding: 61px 0 76px 0;
+  border-top: 2px dashed #00000040;
+  border-bottom: 2px dashed #00000040;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.subs-wrapper__title {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: map_get($colors, txt-dark);
+  width: 387px;
+  min-width: 387px;
+}
+
+.subs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 387px);
+  padding-left: 36px;
+  align-items: center;
+}
+
+.subs-container__item {
+  width: 32.4%;
+  background-color: #ffffff;
+}
+
+.social-btn--narrow--white {
+  color: map_get($colors, txt-dark);
+  line-height: 50px;
+  font-size: 18px;
+  border: 2px solid #777777;
+}
+
+.subs-logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  @include bg-img;
+
+}
+
+.logo-facebook--dark {
+  width: 31px;
+  height: 31px;
+  left: 17px;
+}
+
+.logo-instagram {
+  width: 26px;
+  height: 26px;
+  left: 17px;
+}
+
+.logo-youtube {
+  width: 34px;
+  height: 34px;
+  left: 17px;
+}
+
+.docs-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 55px;
+  width: 100%;
+  padding: 74px 0 93px;
+}
+
+.social-btn--white {
+  color: map_get($colors, txt-dark);
+  line-height: 50px;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07px;
+  border: 2px solid #777777;
+  width: 24.5%;
+  height: 55px;
+}
+
+.copyright {
+  padding: 76px 0 29px;
+
+  text-align: right;
+  color: #333333;
+  font-family: "Raleway", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.53px;
+  text-decoration: none;
+
+  .copyright__link {
+    display: inline-block;
+
+    .copyright__link--light {
+      font-family: "ProximaNova-Extrabld", sans-serif;
+      font-weight: 800;
+      color: #6b6b6b;
+      font-size: 21px;
+      text-transform: uppercase;
+      letter-spacing: -4px;
+    }
+    .copyright__link--dark {
+      font-family: "ProximaNova-Extrabld", sans-serif;
+      color: #000;
+      font-size: 21px;
+      font-weight: 800;
+      text-transform: uppercase;
+      opacity: 1;
+    }
+  }
+}
+
+.subs-logo,.socials-logo{
+  z-index: 3;
+  cursor: pointer;
+}
+
+.subs-logo:hover ~ .social-btn,
+.socials-logo:hover ~ .social-btn{
+  background-color: map_get($colors, bg-red);
+  border-color: map_get($colors, bg-red);
+  color: map_get($colors, txt-white);
+}
+
+.subs-logo:hover{
+  fill:#fff;
+}
+
+.social-btn:hover{
+  background-color: map_get($colors, bg-red);
+  border-color: map_get($colors, bg-red);
+  color: map_get($colors, txt-white);
+}
+

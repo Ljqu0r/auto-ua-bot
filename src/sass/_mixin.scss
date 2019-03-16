@@ -21,18 +21,18 @@
                                    supported by Chrome and Opera */
 }
 
-@mixin margin-xl{
+@mixin margin-xl {
   margin-left: calc((100% - 1140px) / 2);
   margin-right: calc((100% - 1140px) / 2);
 }
 
-@mixin margin-l{
+@mixin margin-l {
   margin-left: calc((100% - 992px) / 2);
   margin-right: calc((100% - 992px) / 2);
 }
 
 
-@mixin slide-arrows{
+@mixin slide-arrows {
   &:before {
     content: "";
     position: absolute;
@@ -67,4 +67,15 @@
     z-index: 1;
     cursor: pointer;
   }
+}
+
+@mixin placeholder{
+  .form__item::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.1s ease-in-out;}
+  .form__item::-moz-placeholder                {opacity: 1; transition: opacity 0.1s ease-in-out;}
+  .form__item:-moz-placeholder                 {opacity: 1; transition: opacity 0.1s ease-in-out;}
+  .form__item:-ms-input-placeholder            {opacity: 1; transition: opacity 0.1s ease-in-out;}
+  .form__item:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.1s ease-in-out;}
+  .form__item:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.1s ease-in-out;}
+  .form__item:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.1s ease-in-out;}
+  .form__item:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.1s ease-in-out;}
 }
