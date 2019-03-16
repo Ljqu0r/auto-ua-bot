@@ -86,18 +86,7 @@
   }
 }
 
-.nav-btn__link--red {
+.nav-btn__link--red{
   border: 3px solid map_get($colors, border-red);
   padding: 13px 25px 12px;
-  color: map_get($colors, txt-red);
-  transition: color .3s ease-in-out, background-color .3s ease-in-out;
-  &:focus {
-    outline: none;
-  }
-  &:hover {
-    color: map_get($colors, txt-white);
-    background-color: map_get($colors, border-red);
-  }
-
 }
-

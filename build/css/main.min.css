@@ -481,14 +481,7 @@ background-color: map-get($colors, theme-blue);
 
 .nav-btn__link--red {
   border: 3px solid #e40037;
-  padding: 13px 25px 12px;
-  color: #e40037;
-  transition: color .3s ease-in-out, background-color .3s ease-in-out; }
-  .nav-btn__link--red:focus {
-    outline: none; }
-  .nav-btn__link--red:hover {
-    color: #fff;
-    background-color: #e40037; }
+  padding: 13px 25px 12px; }
 
 .slider-container {
   position: relative;
@@ -1048,7 +1041,6 @@ background-color: map-get($colors, theme-blue);
 .inner {
   width: 278px;
   height: 55px;
-  background-color: #2b2b2b;
   position: relative;
   font-family: "Raleway", sans-serif; }
 
@@ -1056,30 +1048,24 @@ background-color: map-get($colors, theme-blue);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; }
+  z-index: 1; }
 
 .logo-facebook {
-  background-image: url(../../images/facebook.svg);
   width: 30px;
   height: 30px;
   left: 19px; }
 
 .logo-viber {
-  background-image: url(../../images/viber-logo.svg);
   width: 31px;
   height: 31px;
   left: 21px; }
 
 .logo-telegram {
-  background-image: url(../../images/telegram-logo.svg);
   width: 28px;
   height: 28px;
   left: 19px; }
 
 .logo-whatsapp {
-  background-image: url(../../images/whatsapp.svg);
   width: 29px;
   height: 29px;
   left: 22px; }
@@ -1087,17 +1073,20 @@ background-color: map-get($colors, theme-blue);
 .social-btn {
   transition: background-color .3s ease-in-out, border-color .3s ease-in-out, color .3s ease-in-out;
   width: 100%;
-  display: block;
+  display: inline-block;
   height: 100%;
   text-transform: uppercase;
   text-align: center;
   font-family: "Raleway", sans-serif;
-  font-weight: 700; }
+  font-weight: 700;
+  position: relative; }
 
 .social-btn--dark {
   color: #fff;
   font-size: 18px;
-  line-height: 55px; }
+  border: 2px solid #2b2b2b;
+  line-height: 51px;
+  background-color: #2b2b2b; }
 
 .subs-wrapper {
   padding: 61px 0 76px 0;
@@ -1117,6 +1106,7 @@ background-color: map-get($colors, theme-blue);
   width: 387px;
   min-width: 387px; }
 
+/*Subs-container*/
 .subs-container {
   display: flex;
   flex-direction: row;
@@ -1127,7 +1117,7 @@ background-color: map-get($colors, theme-blue);
 
 .subs-container__item {
   width: 32.4%;
-  background-color: #ffffff; }
+  background-color: transparent; }
 
 .social-btn--narrow--white {
   color: #000;
@@ -1158,6 +1148,7 @@ background-color: map-get($colors, theme-blue);
   height: 34px;
   left: 17px; }
 
+/* docs-container */
 .docs-container {
   display: flex;
   flex-direction: row;
@@ -1178,6 +1169,7 @@ background-color: map-get($colors, theme-blue);
   width: 24.5%;
   height: 55px; }
 
+/*COPYRIGHT*/
 .copyright {
   padding: 76px 0 29px;
   text-align: right;
@@ -1204,23 +1196,104 @@ background-color: map-get($colors, theme-blue);
       text-transform: uppercase;
       opacity: 1; }
 
-.subs-logo, .socials-logo {
-  z-index: 3;
-  cursor: pointer; }
+/*hover effect for svg*/
+path, circle {
+  transition: fill .3s ease; }
 
-.subs-logo:hover ~ .social-btn,
-.socials-logo:hover ~ .social-btn {
-  background-color: #e40037;
-  border-color: #e40037;
-  color: #fff; }
-
-.subs-logo:hover {
+.subs-logo:hover *, .subs-container__item:hover > .subs-logo * {
   fill: #fff; }
 
-.social-btn:hover {
-  background-color: #e40037;
-  border-color: #e40037;
-  color: #fff; }
+.social-btn--dark:hover > .socials-logo * {
+  fill: #000; }
+
+.btn-hover {
+  transition: all 300ms ease; }
+  .btn-hover:before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    background-color: #2b2b2b;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transition: all 0ms ease; }
+  .btn-hover:hover {
+    color: white;
+    border-color: #2b2b2b; }
+    .btn-hover:hover:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: #2b2b2b;
+      top: 0;
+      left: 0%;
+      z-index: -1;
+      transition: all 300ms ease; }
+
+.btn--white {
+  transition: all 300ms ease; }
+  .btn--white:before {
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    transition: all 0ms ease; }
+  .btn--white:hover {
+    color: #000;
+    border-color: #777777;
+    z-index: 1; }
+    .btn--white:hover:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      top: 0;
+      left: 0%;
+      z-index: -1;
+      transition: all 300ms ease; }
+
+.cabinet-hover {
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease-in-out, background-color .3s ease;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  color: #e40037; }
+  .cabinet-hover:hover {
+    color: #fff;
+    border-color: #4b4b4b; }
+
+.cabinet-hover:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e40037;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition: .3s ease;
+  transition: .3s ease; }
+
+.cabinet-hover:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1); }
 
 a {
   -webkit-touch-callout: none;
