@@ -31,6 +31,20 @@
   margin-right: calc((100% - 992px) / 2);
 }
 
+@mixin margin-md{
+  margin-left: calc((100% - 720px) / 2);
+  margin-right: calc((100% - 720px) / 2);
+}
+
+@mixin margin-sm{
+  margin-left: calc((100% - 540px) / 2);
+  margin-right: calc((100% - 540px) / 2);
+}
+
+@mixin margin-xs{
+  margin-left: 0;
+  margin-right: 0;
+}
 
 @mixin slide-arrows {
   &:before {

@@ -89,6 +89,7 @@
   background: map_get($colors, bg-red);
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
+  -ms-transform: scaleX(0);
   -webkit-transform-origin: 50%;
   transform-origin: 50%;
   -webkit-transition-property: transform;

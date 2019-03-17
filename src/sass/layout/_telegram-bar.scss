@@ -12,22 +12,18 @@
   font-size: 32px;
   line-height: 45px;
   padding: 44.5px 0 44.5px;
-  @include margin-l;
   @include margin-xl;
 
 
 
-  .telegram-container__title {
+  .telegram-container__title{
     color: map_get($colors, txt-white);
     font-weight: 800;
     font-size: 32px;
     text-transform: uppercase;
     line-height: 45px;
     width: 500px;
-    @include max(1919px) {
-      font-size: 30px;
-      line-height: 30px;
-    }
+
   }
 
   .telegram-container__button {
@@ -41,10 +37,7 @@
     position: relative;
     padding: 14.5px 100px 14.5px 131px;
 
-    @include max(1919px) {
-      padding: 14.5px 75px 14.5px 100px;
 
-    }
     .telegram-logo {
       display: inline-block;
       position: absolute;
@@ -53,14 +46,12 @@
       height: 26px;
       width: 28px;
       transform: translate(0, -50%);
-      @include max(1919px) {
-        transform: translate(-50%, -50%);
-      }
+
     }
   }
 }
 
-.button-animation{
+.button-animation {
   will-change: transform;
   transition: transform .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transform: scale(1);

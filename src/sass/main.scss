@@ -6,8 +6,8 @@
 @import "grid";
 
 
-@import "layout/head-page";
-@import "layout/carousel";
+@import "layout/nav";
+@import "layout/slider";
 @import "layout/telegram-bar";
 @import "layout/utilities";
 @import "layout/how-it-works";
@@ -15,6 +15,7 @@
 @import "layout/question-block";
 @import "layout/footer";
 @import "layout/button-hover";
+@import "layout/adaptive";
 
 a{
   @include noselect;

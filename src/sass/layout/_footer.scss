@@ -23,7 +23,7 @@
 }
 
 .inner {
-  width: 278px;
+  width: 24.5%;
   height: 55px;
   position: relative;
   font-family: "Raleway", sans-serif;
@@ -96,8 +96,7 @@
   line-height: 45px;
   text-transform: uppercase;
   color: map_get($colors, txt-dark);
-  width: 387px;
-  min-width: 387px;
+  width: 35%;
 }
 
 /*Subs-container*/
@@ -105,8 +104,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: calc(100% - 387px);
-  padding-left: 36px;
+  width: 64%;
   align-items: center;
 }
 
@@ -212,10 +210,6 @@ path, circle {
 .subs-logo:hover *, .subs-container__item:hover > .subs-logo * {
   fill: #fff;
 }
-
-//.socials-logo:hover *, .socials__item:hover > .socials-logo * {
-//  fill: #000;
-//}
 
 .social-btn--dark:hover > .socials-logo *{
   fill: #000;
