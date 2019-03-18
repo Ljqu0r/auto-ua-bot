@@ -1301,7 +1301,7 @@ path, circle {
 
 @media (max-width: 640px) {
   .slider-container {
-    height: 135px; } }
+    height: 140px; } }
 
 @media (max-width: 1366px) {
   .slider-container:after, .slider-container:before {
@@ -1390,6 +1390,8 @@ path, circle {
       width: 435px; }
     .telegram-container .telegram-container__button {
       padding: 14.5px 65px 14.5px 93px; }
+      .telegram-container .telegram-container__button:hover {
+        transform: none; }
       .telegram-container .telegram-container__button .telegram-logo {
         left: 15%; } }
 
@@ -1499,7 +1501,10 @@ path, circle {
 
 @media (max-width: 640px) {
   .card-box {
-    width: 100%; } }
+    width: 100%;
+    padding: 10px 0; }
+    .card-box:hover {
+      transform: none; } }
 
 @media (max-width: 1280px) {
   .pic-box {
@@ -1793,6 +1798,12 @@ path, circle {
   .subs-container__item {
     width: 100%; } }
 
+@media (max-width: 1280px) {
+  .docs-container {
+    flex-wrap: wrap;
+    padding: 40px 0 55px;
+    height: 160px; } }
+
 @media (max-width: 640px) {
   .docs-container {
     padding: 40px 0 55px;
@@ -1805,8 +1816,8 @@ path, circle {
 
 @media (max-width: 1280px) {
   .social-btn--white {
-    width: 44%;
-    margin-top: 10px; } }
+    width: 49%;
+    margin-top: 5px; } }
 
 @media (max-width: 640px) {
   .social-btn--white {
@@ -1816,8 +1827,38 @@ path, circle {
   .copyright {
     height: 24px;
     padding: 0;
-    margin: 30px 0 30px;
+    margin: 0 0 30px;
     text-align: center; } }
+
+@media (max-width: 640px) {
+  .btn-hover {
+    transition: 0s; }
+    .btn-hover:hover {
+      color: unset;
+      border-color: #777777; }
+    .btn-hover:before {
+      display: none; } }
+
+.subs-logo:hover *, .subs-container__item:hover > .subs-logo * {
+  transition: 0s; }
+  @media (max-width: 640px) {
+    .subs-logo:hover *, .subs-container__item:hover > .subs-logo * {
+      fill: #000; } }
+
+@media (max-width: 640px) {
+  .btn--white {
+    transition: all 0s; }
+    .btn--white:before {
+      display: none; }
+    .btn--white:hover {
+      color: #FFF;
+      z-index: -1;
+      border-color: #FFF; } }
+
+@media (max-width: 640px) {
+  .social-btn--dark:hover > .socials-logo * {
+    transition: all 0s;
+    fill: #fff; } }
 
 a {
   -webkit-touch-callout: none;

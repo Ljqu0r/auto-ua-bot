@@ -51,7 +51,7 @@
     height: 350px;
   }
   @include max(640px) {
-    height: 135px;
+    height: 140px;
 
   }
 }
@@ -143,6 +143,9 @@
     }
     .telegram-container__button {
       padding: 14.5px 65px 14.5px 93px;
+      &:hover{
+        transform: none;
+      }
       .telegram-logo {
         left: 15%;
       }
@@ -257,6 +260,10 @@
   }
   @include max(640px) {
     width: 100%;
+    padding: 10px 0;
+    &:hover{
+      transform: none;
+    }
   }
 }
 
@@ -589,6 +596,11 @@
 }
 
 .docs-container {
+  @include max(1280px){
+    flex-wrap: wrap;
+    padding: 40px 0 55px;
+    height: 160px;
+  }
   @include max(640px){
     padding: 40px 0 55px;
     flex-wrap: wrap;
@@ -601,20 +613,67 @@
     font-size: 12px;
   }
   @include max(1280px) {
-    width: 44%;
-    margin-top: 10px;
+    width: 49%;
+    margin-top: 5px;
   }
   @include max(640px) {
     width: 100%;
   }
 }
 
+
 .copyright {
   @include max(992px) {
     height: 24px;
     padding: 0;
-    margin: 30px 0 30px;
+    margin: 0 0 30px;
     text-align: center;
+  }
+}
+
+.btn-hover{
+  @include max(640px){
+    transition: 0s;
+    &:hover{
+      color: unset;
+      border-color: #777777;
+    }
+    &:before{
+      display: none;
+    }
+  }
+}
+
+.subs-logo:hover *, .subs-container__item:hover > .subs-logo * {
+  transition: 0s;
+  @include max(640px){
+    fill: #000;
+  }
+}
+
+.btn--white{
+  @include max(640px){
+    transition: all 0s;
+    &:before{
+      display: none;
+    }
+    &:hover{
+      color: #FFF;
+      z-index: -1;
+      border-color:#FFF;
+    }
+  }
+}
+
+.social-btn--dark:hover > .socials-logo *{
+  @include max(640px){
+    transition: all 0s;
+    fill: #fff;
   }
 
 }
+
+//
+//
+//
+//
