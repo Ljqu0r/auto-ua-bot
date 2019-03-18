@@ -631,47 +631,6 @@
   }
 }
 
-.btn-hover{
-  @include max(640px){
-    transition: 0s;
-    &:hover{
-      color: unset;
-      border-color: #777777;
-    }
-    &:before{
-      display: none;
-    }
-  }
-}
-
-.subs-logo:hover *, .subs-container__item:hover > .subs-logo * {
-  transition: 0s;
-  @include max(640px){
-    fill: #000;
-  }
-}
-
-.btn--white{
-  @include max(640px){
-    transition: all 0s;
-    &:before{
-      display: none;
-    }
-    &:hover{
-      color: #FFF;
-      z-index: -1;
-      border-color:#FFF;
-    }
-  }
-}
-
-.social-btn--dark:hover > .socials-logo *{
-  @include max(640px){
-    transition: all 0s;
-    fill: #fff;
-  }
-
-}
 
 //
 //

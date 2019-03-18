@@ -1830,36 +1830,6 @@ path, circle {
     margin: 0 0 30px;
     text-align: center; } }
 
-@media (max-width: 640px) {
-  .btn-hover {
-    transition: 0s; }
-    .btn-hover:hover {
-      color: unset;
-      border-color: #777777; }
-    .btn-hover:before {
-      display: none; } }
-
-.subs-logo:hover *, .subs-container__item:hover > .subs-logo * {
-  transition: 0s; }
-  @media (max-width: 640px) {
-    .subs-logo:hover *, .subs-container__item:hover > .subs-logo * {
-      fill: #000; } }
-
-@media (max-width: 640px) {
-  .btn--white {
-    transition: all 0s; }
-    .btn--white:before {
-      display: none; }
-    .btn--white:hover {
-      color: #FFF;
-      z-index: -1;
-      border-color: #FFF; } }
-
-@media (max-width: 640px) {
-  .social-btn--dark:hover > .socials-logo * {
-    transition: all 0s;
-    fill: #fff; } }
-
 a {
   -webkit-touch-callout: none;
   /* iOS Safari */
