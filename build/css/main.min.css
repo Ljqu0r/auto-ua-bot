@@ -606,7 +606,8 @@ background-color: map-get($colors, theme-blue);
 .wrapper {
   background-color: #fff;
   margin-left: calc((100% - 1140px) / 2);
-  margin-right: calc((100% - 1140px) / 2); }
+  margin-right: calc((100% - 1140px) / 2);
+  position: relative; }
 
 .title-wrap {
   margin: 0;
@@ -1453,7 +1454,9 @@ path, circle {
 
 @media (max-width: 1280px) {
   .title-wrap {
-    height: 150px; } }
+    height: 150px; }
+    .title-wrap:after {
+      display: none; } }
 
 @media (max-width: 992px) {
   .title-wrap {
@@ -1537,16 +1540,35 @@ path, circle {
     flex-wrap: wrap;
     height: 100%;
     margin-top: 50px;
-    margin-bottom: 50px; } }
+    margin-bottom: 50px; }
+    .about:before {
+      height: 70px;
+      width: 25px;
+      left: 0;
+      top: 125px;
+      background-size: 20px; }
+    .about:after {
+      height: 70px;
+      width: 25px;
+      right: 0;
+      top: 125px;
+      background-size: 20px; } }
 
 @media (max-width: 640px) {
   .about .video-container {
     width: 100%;
-    height: 250px; } }
+    height: 250px;
+    margin-bottom: 5px; } }
 
 @media (max-width: 640px) {
   .about .desc-container {
     width: 49%; } }
+
+@media (max-width: 640px) {
+  .about .desc-container__item {
+    width: 100%;
+    height: 180px;
+    margin-bottom: 5px; } }
 
 @media (max-width: 992px) {
   .about .desc__text {
@@ -1765,10 +1787,11 @@ path, circle {
   .subs-container__item {
     width: 100%; } }
 
-.docs-container {
-  padding: 40px 0 55px;
-  flex-wrap: wrap;
-  height: 100%; }
+@media (max-width: 640px) {
+  .docs-container {
+    padding: 40px 0 55px;
+    flex-wrap: wrap;
+    height: 354px; } }
 
 @media (max-width: 1366px) {
   .social-btn--white {
@@ -1785,7 +1808,9 @@ path, circle {
 
 @media (max-width: 992px) {
   .copyright {
-    padding: 30px 0 30px;
+    height: 24px;
+    padding: 0;
+    margin: 30px 0 30px;
     text-align: center; } }
 
 a {
