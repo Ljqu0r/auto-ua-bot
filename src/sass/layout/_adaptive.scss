@@ -1,5 +1,5 @@
 .logo {
-  @include max(920px){
+  @include max(920px) {
     margin: 0 auto;
   }
 }
@@ -13,7 +13,7 @@
     font-size: 36px;
     margin: 20px 0 20px;
   }
-  @include max(920px){
+  @include max(920px) {
     font-size: 32px;
   }
   @include max(640px) {
@@ -50,7 +50,7 @@
   @include max(920px) {
     height: 350px;
   }
-  @include max(640px){
+  @include max(640px) {
     height: 135px;
 
   }
@@ -60,11 +60,11 @@
   @include max(1366px) {
     height: 140px;
   }
-  @include max(992px){
+  @include max(992px) {
     height: 90px;
     width: 30px;
   }
-  @include max(640px){
+  @include max(640px) {
     width: 15px;
     height: 50px;
     background-size: 15px;
@@ -80,11 +80,11 @@
     @include margin-md;
     top: 30px;
   }
-  @include max(992px){
+  @include max(992px) {
     @include margin-sm;
     top: 15px;
   }
-  @include max(640px){
+  @include max(640px) {
     left: 15%;
     margin: 0;
   }
@@ -97,7 +97,7 @@
   @include max(992px) {
     font-size: 24px;
   }
-  @include max(640px){
+  @include max(640px) {
     font-size: 12px;
   }
 
@@ -107,7 +107,7 @@
   @include max(1366px) {
     line-height: unset;
   }
-  @include max(640px){
+  @include max(640px) {
     padding: 2px 5px 2px 5px;
   }
 }
@@ -125,7 +125,7 @@
     margin-top: 15px;
 
   }
-  @include max(640px){
+  @include max(640px) {
     margin-top: 10px;
     padding: 2px 5px 2px 5px;
     font-size: 10px;
@@ -198,67 +198,70 @@
   @include max(1366px) {
     @include margin-l;
   }
-  @include max(1280px){
+  @include max(1280px) {
     @include margin-md;
   }
-  @include max(920px){
+  @include max(920px) {
     @include margin-sm;
   }
-  @include max(640px){
+  @include max(640px) {
     margin: 0 10px;
   }
 }
 
-.title-wrap{
-  @include max(1280px){
+.title-wrap {
+  @include max(1280px) {
     height: 150px;
+    &:after{
+      display: none;
+    }
   }
-  @include max(992px){
+  @include max(992px) {
     height: 130px;
   }
-  @include max(640px){
+  @include max(640px) {
     height: 90px;
   }
 }
 
-.title{
-  @include max(1280px){
+.title {
+  @include max(1280px) {
     font-size: 38px;
   }
-  @include max(992px){
+  @include max(992px) {
     font-size: 32px;
     padding-bottom: 35px;
   }
-  @include max(640px){
+  @include max(640px) {
     font-size: 20px;
     padding-bottom: 15px;
   }
 }
 
-.container{
-  @include max(1280px){
+.container {
+  @include max(1280px) {
     padding: 70px 0 85px;
   }
-  @include max(992px){
+  @include max(992px) {
     padding: 50px 0 65px;
   }
-  @include max(640px){
+  @include max(640px) {
     flex-wrap: wrap;
     padding: 50px 0 50px;
   }
 }
 
-.card-box{
-  @include max(992px){
+.card-box {
+  @include max(992px) {
     width: 47%;
   }
-  @include max(640px){
+  @include max(640px) {
     width: 100%;
   }
 }
 
-.pic-box{
-  @include max(1280px){
+.pic-box {
+  @include max(1280px) {
     height: 200px;
   }
 }
@@ -267,30 +270,30 @@
   @include max(1366px) {
     padding: 10px 5px 5px 30px;
   }
-  @include max(1280px){
+  @include max(1280px) {
     font-size: 18px;
-    &:before{
+    &:before {
       top: 17px;
     }
   }
 }
 
-.about{
-  @include max(1280px){
+.about {
+  @include max(1280px) {
     padding: 0;
     margin-top: 70px;
     margin-bottom: 85px;
   }
-  @include max(992px){
+  @include max(992px) {
     height: 320px;
-    &:before{
+    &:before {
       height: 110px;
       width: 25px;
       left: -12.5px;
       background-size: 20px;
 
     }
-    &:after{
+    &:after {
       right: -12.5px;
       height: 110px;
       width: 25px;
@@ -298,28 +301,51 @@
 
     }
   }
-  @include max(640px){
+  @include max(640px) {
     flex-wrap: wrap;
     height: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
-  }
-
-  .video-container{
-    @include max(640px){
-      width: 100%;
-      height: 250px;
+    &:before {
+      height: 70px;
+      width: 25px;
+      left: 0;
+      top: 125px;
+      background-size: 20px;
+    }
+    &:after {
+      height: 70px;
+      width: 25px;
+      right: 0;
+      top: 125px;
+      background-size: 20px;
     }
   }
 
-  .desc-container{
-    @include max(640px){
+  .video-container {
+    @include max(640px) {
+      width: 100%;
+      height: 250px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .desc-container {
+    @include max(640px) {
       width: 49%;
     }
   }
 
-  .desc__text{
-    @include max(992px){
+  .desc-container__item{
+    @include max(640px){
+      width: 100%;
+      height: 180px;
+      margin-bottom: 5px;
+    }
+  }
+
+  .desc__text {
+    @include max(992px) {
       padding: 15px 15px 0 15px;
       height: 75%;
       font-size: 15px;
@@ -327,8 +353,8 @@
     }
   }
 
-  .arrow-down{
-    @include max(992px){
+  .arrow-down {
+    @include max(992px) {
       height: 22px;
       width: 100%;
       bottom: 0;
@@ -337,8 +363,8 @@
     }
   }
 
-  .video-container__play-button{
-    @include max(992px){
+  .video-container__play-button {
+    @include max(992px) {
       width: 55px;
       height: 55px;
     }
@@ -349,7 +375,7 @@
   @include max(1366px) {
     padding: 80px 0;
   }
-  @include max(640px){
+  @include max(640px) {
     padding: 30px 0;
   }
 }
@@ -363,13 +389,19 @@
       width: 15px;
     }
   }
-  @include max(992px){
+  @include max(992px) {
     padding: 10.5px 0 11px 35px;
     font-size: 14px;
-    &:after{
+    &:after {
       height: 12px;
       width: 12px;
       right: 30px;
+    }
+  }
+  @include max(640px){
+    padding: 10.5px 60px 11px 35px;
+    &:after{
+      top: calc(50% - 6px);
     }
   }
 }
@@ -378,20 +410,20 @@
   @include max(1366px) {
     padding: 26px 87px 26px 57px;
   }
-  @include max(1280){
+  @include max(1280) {
     font-size: 16px;
   }
-  @include max(992px){
+  @include max(992px) {
     padding: 15px 40px 15px 50px;
     font-size: 15px;
   }
 }
 
-.form{
-  @include max(992px){
+.form {
+  @include max(992px) {
     width: 40%;
   }
-  @include max(640px){
+  @include max(640px) {
     width: 100%;
     margin-top: 100px;
   }
@@ -401,36 +433,36 @@
   @include max(1366px) {
     @include margin-l;
   }
-  @include max(1280px){
+  @include max(1280px) {
     @include margin-md;
   }
-  @include max(992px){
+  @include max(992px) {
     @include margin-sm;
   }
-  @include max(640px){
+  @include max(640px) {
     margin: 0 10px;
     flex-wrap: wrap;
   }
 }
 
-.question-container{
-  @include max(992px){
+.question-container {
+  @include max(992px) {
     width: 53%;
   }
-  @include max(640px){
+  @include max(640px) {
     width: 100%;
     align-items: center;
   }
 }
 
-.question-container__heading{
-  @include max(992px){
+.question-container__heading {
+  @include max(992px) {
     font-size: 28px;
   }
 }
 
-.question-container__text{
-  @include max(992px){
+.question-container__text {
+  @include max(992px) {
     font-size: 22px;
     padding: 0 12px 0 10px;
   }
@@ -454,17 +486,17 @@
     max-width: 550px;
   }
 
-  @include max(1280px){
+  @include max(1280px) {
     width: 450px;
     max-width: 450px;
   }
-  @include max(992px){
+  @include max(992px) {
     top: 40%;
     left: 40%;
     width: 380px;
     max-width: 380px;
   }
-  @include max(640px){
+  @include max(640px) {
     width: 320px;
     max-width: 320px;
     left: 50%;
@@ -478,108 +510,110 @@
     @include margin-l;
   }
 
-  @include max(1280px){
+  @include max(1280px) {
     @include margin-md;
   }
 
-  @include max(992px){
+  @include max(992px) {
     @include margin-sm;
   }
 
-  @include max(640px){
+  @include max(640px) {
     margin: 0 10px;
   }
 }
 
-.socials{
-  @include max(1280px){
+.socials {
+  @include max(1280px) {
     flex-wrap: wrap;
     padding: 25px 0 40px 0;
   }
 }
 
-.socials-title{
-  @include max(1280px){
+.socials-title {
+  @include max(1280px) {
     width: 100%;
     margin: 40px auto 0;
   }
 }
 
-.inner{
-  @include max(1280px){
+.inner {
+  @include max(1280px) {
     width: 49%;
     margin-top: 5px;
   }
-  @include max(640px){
+  @include max(640px) {
     width: 100%;
   }
 }
 
-.subs-wrapper{
-  @include max(1280px){
+.subs-wrapper {
+  @include max(1280px) {
     padding: 40px 0 41px 0;
     align-items: center;
   }
-  @include max(640px){
+  @include max(640px) {
     flex-wrap: wrap;
     justify-content: center;
   }
 }
 
-.subs-wrapper__title{
-  @include max(1280px){
+.subs-wrapper__title {
+  @include max(1280px) {
     width: 55%;
   }
-  @include max(992px){
+  @include max(992px) {
     font-size: 28px;
   }
-  @include max(640px){
+  @include max(640px) {
     font-size: 24px;
     width: 100%;
     text-align: center;
   }
 }
 
-.subs-container{
-  @include max(1280px){
+.subs-container {
+  @include max(1280px) {
     width: 40%;
     flex-direction: column;
   }
+  @include max(640px) {
+    width: 100%;
+  }
+}
+
+.subs-container__item {
+  @include max(1280px) {
+    width: 100%;
+  }
+}
+
+.docs-container {
   @include max(640px){
-    width: 100%;
+    padding: 40px 0 55px;
+    flex-wrap: wrap;
+    height: 354px;
   }
-}
-
-.subs-container__item{
-  @include max(1280px){
-    width: 100%;
-  }
-}
-
-
-
-.docs-container{
-  padding: 40px 0 55px;
-  flex-wrap: wrap;
-  height: 100%;
 }
 
 .social-btn--white {
   @include max(1366px) {
     font-size: 12px;
   }
-  @include max(1280px){
+  @include max(1280px) {
     width: 44%;
     margin-top: 10px;
   }
-  @include max(640px){
+  @include max(640px) {
     width: 100%;
   }
 }
 
-.copyright{
-  @include max(992px){
-    padding: 30px 0 30px;
+.copyright {
+  @include max(992px) {
+    height: 24px;
+    padding: 0;
+    margin: 30px 0 30px;
     text-align: center;
   }
 

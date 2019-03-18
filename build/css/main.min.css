@@ -1615,6 +1615,12 @@ path, circle {
       width: 12px;
       right: 30px; } }
 
+@media (max-width: 640px) {
+  .panel__heading {
+    padding: 10.5px 60px 11px 35px; }
+    .panel__heading:after {
+      top: calc(50% - 6px); } }
+
 @media (max-width: 1366px) {
   .panel__text {
     padding: 26px 87px 26px 57px; } }

@@ -1,6 +1,7 @@
 .wrapper {
   background-color: map_get($colors, txt-white);
   @include margin-xl;
+  position: relative;
 }
 
 .title-wrap {
