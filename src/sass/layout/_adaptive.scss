@@ -133,6 +133,12 @@
   }
 }
 
+.button-animation{
+  @include max(992px){
+    transform: none;
+  }
+}
+
 .telegram-container {
   @include max(1366px) {
     @include margin-l;
@@ -143,9 +149,6 @@
     }
     .telegram-container__button {
       padding: 14.5px 65px 14.5px 93px;
-      &:hover{
-        transform: none;
-      }
       .telegram-logo {
         left: 15%;
       }
